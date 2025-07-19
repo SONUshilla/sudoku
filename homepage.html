@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sudoku Home</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(120deg, #a8e6cf, #dcedc1);
+      background-size: 200% 200%;
+      animation: bgMove 10s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes bgMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .home-container {
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 3rem 4rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #2e7d32;
+      margin-bottom: 2rem;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    button {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      background-color: #66bb6a;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background-color: #388e3c;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="home-container">
+    <h1>Sudoku</h1>
+    <div class="button-group">
+      <button onclick="startPlay()">🎮 Play Sudoku</button>
+      <button onclick="startSolve()">🧠 Solve Sudoku</button>
+    </div>
+  </div>
+
+  <script>
+    function startPlay() {
+      window.location.href = "./playSudoku.html";
+   
+    }
+
+    function startSolve() {
+      // Replace with real navigation
+      window.location.href = "./sudolu.html";
+    }
+  </script>
+</body>
+</html>

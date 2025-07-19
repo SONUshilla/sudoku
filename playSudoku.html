@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="./sudoku.css" />
+</head>
+
+<body>
+    <div class="container">
+   
+        <div id="custom-alert" class="hidden">
+            <div class="alert-box">
+                <p>Are you sure you want to start a new game?</p>
+                <div class="alert-buttons">
+                    <button id="confirm-btn">Yes</button>
+                    <button id="cancel-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <div class="top-bar">
+            <h1 class="heading">Sudoku</h1>
+            <div class="controls">
+                <div id="sound-toggle" title="Toggle Sound">🔇</div>
+                <div id="timer">00:00</div>
+            </div>
+        </div>
+             <div class="features">
+                <a href="./homepage.html" class="icon-btn" title="Home">
+                    <img class="home" src="./square.png" alt="Home">
+                  </a>
+                           
+            <button onclick="" id="pause-btn" title="Pause Timer">⏸</button>
+            <button id="restart-btn" title="Restart Timer">🔄</button>
+            <button id="new-btn" title="New Game">🆕</button>
+        </div>
+
+        <div class="box"></div>
+    </div>
+
+    <script src="./playsudoku.jsx"></script>
+</body>
+
+</html>
