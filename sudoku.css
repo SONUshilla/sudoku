@@ -16,16 +16,13 @@ body {
   font-family: 'Roboto Mono', monospace;
 }
 .box{
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: repeat(9, 1fr);
-  gap: 1px;
-  background: #c8e6c9;
-  border: 2px solid #388e3c;
-  border-radius: 8px;
-  overflow: hidden;
-  margin-bottom: 25px;
-  aspect-ratio: 1/1;
+    display: grid;
+    height: 90vw;
+    aspect-ratio: 1/1;
+    background-color: #f0f0f0;
+    grid-template-columns: repeat(9,1fr);
+    grid-template-rows: repeat(9,1fr);
+    border: 2px solid gray;
 
 }
 .container {
