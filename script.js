@@ -17,7 +17,9 @@ for (let i = 0; i < 9; i++) {
       input.style.borderRight = "1.5px solid red";
     }
     input.type = "number";
+    input.type = "number";
     input.name = "input";
+    input.setAttribute("inputmode", "numeric"); // helps on mobile
     input.innerText = arr[i][j];
     input.classList.add("grid");
     input.classList.add(`cell-${i}-${j}`);
@@ -130,6 +132,11 @@ function solve(arr, i = 0, j = 0) {
 
 const generate=document.getElementById("solve-btn");
 generate.addEventListener('click',()=>{
-  solve(arr);
-  displaySolution(arr);
+  if(solve(arr))
+  {
+    displaySolution(arr);
+  }
+  else{
+    alert("No solution found");
+  }
 });

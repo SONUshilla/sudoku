@@ -18,6 +18,7 @@ for (let i = 0; i < 9; i++) {
     }
     input.type = "number";
     input.name = "input";
+    input.setAttribute("inputmode", "numeric"); // helps on mobile
     input.innerText = arr[i][j];
     input.classList.add("grid");
     input.classList.add(`cell-${i}-${j}`);
@@ -28,25 +29,26 @@ for (let i = 0; i < 9; i++) {
     input.addEventListener("input", function () {
       let i = parseInt(this.getAttribute("data-row"));
       let j = parseInt(this.getAttribute("data-col"));
-      arr[i][j] = this.textContent.trim(); // safer and more reliable
       let value = this.textContent.trim();
       if (timerstart === false) {
         timerchange(); // Don't set timerstart yourself
       }
       // Only allow digits 1-9
       if (/^[1-9]$/.test(value)) {
-        arr[i][j] = value;
-        this.style.color = "blue";
+        arr[i][j] = Number(this.textContent.trim()) || 0;
+        if(isValidSudoku(arr))
+          {
+            console.log("this is the problem");
+            this.style.color = "blue";
+          }
+        else this.style.color = "red";
       } else {
         // If invalid, clear it and reset style
         this.textContent = " ";
         arr[i][j] = " ";
         this.style.color = "black";
       }
-      if(!isValidSudoku(arr))
-      {
-        this.style.color = "red";
-      }
+    
     });
     input.addEventListener("click", handleInputClick);
   }
@@ -68,6 +70,7 @@ function isValidSudoku(arr) {
       if (arr[i][j] == 0) {
         continue;
       }
+
       for (let k = 0; k < 9; k++) {
         if (arr[k][j] == arr[i][j] && k != i) return false;
         if (arr[i][k] == arr[i][j] && k != j) return false;
