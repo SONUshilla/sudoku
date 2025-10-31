@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./sudoku.css" />
-   
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sudoku Solver</title>
+  <link rel="stylesheet" href="./sudoku.css" />
 </head>
 
 <body>
-    <div class="container">
-        <div class="top-bar">
-          <h1 class="heading">Sudoku</h1>
-          <a href="./index.html" class="icon-btn" title="Home">
-            <img class="home" src="./square.png" alt="Home">
-          </a>
-        </div>
-        <span>Fill the cells to generate Sudoku</span>
-      
-        <div class="box"></div>
-        <button class="solve_it" id="solve-btn">Solve Sudoku</button>
-      </div>
-      
+  <div class="background"></div>
+
+  <div class="container">
+    <div class="top-bar">
+      <h1 class="heading">🧩 Sudoku Solver</h1>
+      <a href="./index.html" class="icon-btn" title="Home">
+        <img class="home" src="./square.png" alt="Home" />
+      </a>
+    </div>
+
+    <p class="subtitle">Fill the cells and click <b>Solve Sudoku</b> to see the magic!</p>
+
+    <div class="box"></div>
+
+    <button class="solve_it" id="solve-btn">✨ Solve Sudoku</button>
+  </div>
+
+  <script src="./script.js"></script>
 </body>
-<script src="./script.js"></script>
 </html>
